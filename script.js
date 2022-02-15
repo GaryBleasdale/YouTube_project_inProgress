@@ -1,3 +1,5 @@
+require('dotenv').config();
+let api_key=process.env.API_KEY;
 let container = document.body.querySelector('.container');
 let searchResults = document.body.querySelector('.search-results');
 let searchBtn=document.body.querySelector('#searchbtn')
@@ -30,7 +32,7 @@ function getVal() {
 
 
 $.ajax({
-  url: `https://www.googleapis.com/youtube/v3/search?part=snippet&%20&q=${val}%20&type=video%20&key=AIzaSyBMccR4yASb2d9yTvk-wKBPbS6776uxWGA`,
+  url: `https://www.googleapis.com/youtube/v3/search?part=snippet&%20&q=${val}%20&type=video%20&key=${api_key}`,
   success: function (data) {
     JSON.stringify(data)
     console.log(data)

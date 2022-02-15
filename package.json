@@ -1,0 +1,23 @@
+{
+  "name": "youtube-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GaryBleasdale/YouTube_API_Project-in-progress-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GaryBleasdale/YouTube_API_Project-in-progress-/issues"
+  },
+  "homepage": "https://github.com/GaryBleasdale/YouTube_API_Project-in-progress-#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "requirejs": "^2.3.6"
+  }
+}
