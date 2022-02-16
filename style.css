@@ -9,7 +9,7 @@
 }
 
 body{
-  background-color: #ff8000;
+  background-color: #ffffff;
   color:rgb(0, 0, 0);
   font-family: 'Roboto', sans-serif;
   display:flex;
@@ -27,11 +27,32 @@ body{
   padding-bottom:40px;
 }
 
+
+
 .main-header{
   display:flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.main-header>img{
+  width:200px;
+  margin-bottom:40px;
+}
+
+.main-header>h1{
+  margin-bottom:10px;
+  font-weight: 700;
+}
+
+.main-header>h3{
+  margin-bottom:10px;
+  font-weight: 400;
+  letter-spacing:1px;
+  width:300px;
+  line-height: 30px;
+  color:rgb(95, 93, 93);
 }
 
 .search-bar{
@@ -56,11 +77,18 @@ body{
   margin:0px 20px;
 }
 
+.search-bar>input{
+  border-radius: 25px 0px 0px 30px;
+  height:30px;
+  width:300px;
+  padding-left:8px;
+}
+
 .search-result{
   background-color: white;
   margin: 20px 20px;
   border-radius: 5px;
-  padding:20px 20px;
+  padding:20px 0px;
 }
 
 .search-result a{
@@ -72,11 +100,103 @@ body{
 .left-hand img{
 border-radius: 5px;
 margin-right:10px;
+height:140px;
 }
 
 .right-hand{
   display:flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width:600px;
+  padding-bottom:20px;
 }
 
+
+i{
+  font-size: 20px;
+  color: red;
+}
+
+button{
+ border-radius: 0px 50px 50px 0px;
+ width:50px;
+ transition: all 150ms ease;
+}
+
+button:hover{
+  background-color: darkgrey;
+  transition: all 150ms ease;
+}
+
+.chevron1{
+  display:inline;
+}
+
+.chevron2, .chevron3{
+  display:none;
+}
+
+.animate{
+  animation-name: colorize;
+  animation-duration:800ms;
+  animation-iteration-count:infinite;
+}
+
+@keyframes colorize {
+  0%{
+    color: red;
+  }
+  100%{
+     color: white;
+  }
+}
+
+.showing-results-text{
+  margin-left:20px;
+}
+
+.results-img{
+  margin-right:15px;
+}
+
+@media only screen and (max-width:970px) {
+  .header-2-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin:20px 20px;
+  }
+  .header-2-container>.search-bar{
+    margin-top:20px;
+  }
+
+  .right-hand{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width:600px;
+    padding:10px 0px;
+  }
+  
+}
+
+@media only screen and (max-width:590px) {
+  .search-result>a{
+    flex-direction: column;
+    max-width:90%;
+    margin:auto;
+  }
+  .left-hand>img{
+    width:100%;
+    height:auto;
+  }
+
+  .right-hand>h2{
+    margin-bottom:10px;
+  }
+
+  .showing-results-text{
+    text-align: center;
+  }
+}
