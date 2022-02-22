@@ -22,6 +22,17 @@ function getVal() {
       results[i].remove();
     }
   }
+  if(results.length>0){
+    for (i=0;i<results.length;i++){
+      results[i].remove();
+    }
+  }
+
+  let h3= document.body.getElementsByTagName('h3');
+  if (h3.length>1){
+    h3[1].remove();
+  }
+
   let resultText = document.createElement("h3");
   resultText.classList.add('yousearched')
   resultText.innerText=`
